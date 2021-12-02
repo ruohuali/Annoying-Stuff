@@ -1,0 +1,16 @@
+Problem
+Repeatedly encounter dual installation of Ubuntu 20.02 cannot start and stuck at file init page showing /dev/block......clean. In the same Windows 10 fails to use dual display.
+In this case it is because Nvidia drive fails some how.
+
+Fix found in
+https://askubuntu.com/questions/882385/dev-sda1-clean-this-message-appears-after-i-startup-my-laptop-then-it-w
+
+Reboot into recovery mode by choosing recovery boot or other method. Then in the root terminal do
+sudo apt-get purge nvidia*
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+sudo apt install nvidia-settings
+reboot
+Then should recover the use of Ubuntu. Inside Ubuntu GUI, choose "drivers" application and install nvidia driver.
+After these if still cannot use dual display, unplug the screen from the computer and power, wait for the screen's start button to turn off showing that it is fully discharged,
+then replug everything.
