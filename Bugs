@@ -18,3 +18,7 @@ then replug everything.
 
 Problem
 torch Dataset's can only have num_workers > 0 if it is inited on CPU (generally init Dataset on CPU and cast data to GPU would be a choice).
+
+
+Problem
+Never run a training process with a jupyter file opened, major GPU mem consumer.
