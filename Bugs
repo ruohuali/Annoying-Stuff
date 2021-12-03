@@ -14,3 +14,7 @@ reboot
 Then should recover the use of Ubuntu. Inside Ubuntu GUI, choose "drivers" application and install nvidia driver.
 After these if still cannot use dual display, unplug the screen from the computer and power, wait for the screen's start button to turn off showing that it is fully discharged,
 then replug everything.
+
+
+Problem
+torch Dataset's can only have num_workers > 0 if it is inited on CPU (generally init Dataset on CPU and cast data to GPU would be a choice).
