@@ -27,3 +27,7 @@ Never run a training process with a jupyter file opened, major GPU mem consumer.
 Problem
 Pytorch pretrained vision models' input images sometimes require image normalization(transforms.normalize), sometimes require RGB normalization(utils.convert_dtype 
 which convert uint8 to float and in the same time map [0, 255] to [0, 1]).
+
+
+Problem
+Sometimes fails to use model.eval() before validation turn in DL CV training will lead to the deceiving impression that val loss is decreasing when it's not.
