@@ -31,3 +31,7 @@ which convert uint8 to float and in the same time map [0, 255] to [0, 1]).
 
 Problem
 Sometimes fails to use model.eval() before validation turn in DL CV training will lead to the deceiving impression that val loss is decreasing when it's not.
+
+
+Problem
+Batch size is often the most important problem to DL CV in not converging problem, the greater the better, especially with BN.
